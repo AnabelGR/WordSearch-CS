@@ -20,5 +20,19 @@ namespace WordSearch
       //ASSERT
       Assert.Equal(wordCount, result);
     }
+//FIND WORD AND MATCH
+    [Fact]
+    public void Test2_AreWordsNotIdentical_Count()
+    {
+      //ARRANGE
+      string testWord = "hi";
+      string matchWord = "no";
+      int wordCount = 0;
+      RepeatCounter newCounter = new RepeatCounter();
+      //ACT
+      int result =  newCounter.CheckRepeatCounter(testWord, matchWord);
+      //ASSERT
+      Assert.Equal(wordCount, result);
+    }
   }
 }
