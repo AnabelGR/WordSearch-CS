@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 namespace WordSearch
 {
-  public class RepeatSearch
+  public class RepeatCounter
   {
     private string _userSentence;
     private string _userWord;
     private int _wordCount;
 
-    public RepeatSearch(string userSentence, string userWord)
+    public RepeatCounter(string userSentence, string userWord, int wordCount)
     {
       _userSentence = userSentence;
       _userWord = userWord;

@@ -13,9 +13,9 @@ namespace WordSearch
       //ARRANGE
       string testWord = "hi";
       string matchWord = "hi";
-      RepeatSearch newSearch = new RepeatSearch();
+      RepeatCounter newCounter = new RepeatCounter();
       //ACT
-      string result =  newSearch.Search(testWord);
+      string result =  newCounter.Search(testWord);
       //ASSERT
       Assert.Equal(matchWord, result);
     }
@@ -25,9 +25,9 @@ namespace WordSearch
       //ARRANGE
       string testWord = "hi";
       string matchWord = "hello";
-      RepeatSearch newSearch = new RepeatSearch();
+      RepeatCounter newCounter = new RepeatCounter();
       //ACT
-      string result = newSearch.Search(testWord);
+      string result = newCounter.Search(testWord);
       //ASSERT
       Assert.Equal(matchWord, result);
     }
@@ -38,9 +38,9 @@ namespace WordSearch
       string testSentence = "hello world";
       string matchWord = "hello";
       int wordCount = 1;
-      RepeatSearch findWord = new RepeatSearch();
+      RepeatCounter newCounter = new RepeatCounter();
       //ACT
-      int result = findWord.CountRepeats(testSentence, matchWord);
+      int result = newCounter.CountRepeats(testSentence, matchWord);
       //ASSERT
       Assert.Equal(wordCount, result);
     }
@@ -51,9 +51,9 @@ namespace WordSearch
       string testSentence = "hello world, hello universe";
       string matchWord = "hello";
       int wordCount = 2;
-      RepeatSearch findWord = new RepeatSearch();
+      RepeatCounter newCounter = new RepeatCounter();
       //ACT
-      int result = findWord.CountRepeats(testSentence, matchWord);
+      int result = newCounter.CountRepeats(testSentence, matchWord);
       //ASSERT
       Assert.Equal(wordCount, result);
     }
@@ -64,9 +64,9 @@ namespace WordSearch
       string testSentence = "Hello world, hEllo universe";
       string matchWord = "hello";
       int wordCount = 2;
-      RepeatSearch findWord = new RepeatSearch();
+      RepeatCounter newCounter = new RepeatCounter();
       //ACT
-      int result = findWord.CountRepeats(testSentence, matchWord);
+      int result = newCounter.CountRepeats(testSentence, matchWord);
       //ASSERT
       Assert.Equal(wordCount, result);
     }
