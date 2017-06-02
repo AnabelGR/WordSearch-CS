@@ -18,10 +18,10 @@ namespace WordSearch
 
     public int CountRepeats()
     {
-      string[] userSentenceSplit = _userSentence.Split(' ');
+      string[] userSentenceSplit = _userSentence.ToLower()Split.(' ');
       for (int i = 0; i < userSentenceSplit.Length; i++)
       {
-        if (userSentenceSplit[i] == _userWord)
+        if (userSentenceSplit[i] == _userWord.ToLower())
         {
           _wordCount += 1;
         }
