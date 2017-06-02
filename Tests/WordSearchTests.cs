@@ -31,5 +31,18 @@ namespace WordSearch
       //ASSERT
       Assert.Equal(matchWord, result);
     }
+    [Fact]
+    public void Test3_CountWord_EnterStringCountWords()
+    {
+      //ARRANGE
+      string testSentence = "hello world";
+      string matchWord = "hello";
+      int counter = 1;
+      Counter findWord = new Counter(testSentence, matchWord)
+      //ACT
+      string result = findWord.CountRepeats();
+      //ASSERT
+      Assert.Equal(counter, result);
+    }
   }
 }
