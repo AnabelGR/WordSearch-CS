@@ -29,7 +29,7 @@ namespace WordSearch
     {
       return _wordCount;
     }
-    public void SetwordCount(int wordCount)
+    public void SetWordCount(int wordCount)
     {
       _wordCount = wordCount;
     }
