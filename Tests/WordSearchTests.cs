@@ -39,9 +39,9 @@ namespace WordSearch
         public void Test3_CountOneInASentence_Count()
         {
           //ARRANGE
-          string testWord = "hi";
-          string matchWord = "no";
-          int wordCount = 0;
+          string testWord = "hi world";
+          string matchWord = "hi";
+          int wordCount = 1;
           RepeatCounter newCounter = new RepeatCounter();
           //ACT
           int result =  newCounter.CheckRepeatCounter(testWord, matchWord);
