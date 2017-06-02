@@ -1,20 +1,21 @@
+using Xunit;
 using System;
 using System.Collections.Generic;
-using Xunit;
 
 namespace WordSearch
 {
-  public class RepeatSearchTest
+  public class WordSearchTest
   {
+//FIND WORD AND MATCH
     [Fact]
-    public void RepeatSearchTest1_Identical_True()
+    public void Test1_AreWordsIdentical_Search()
     {
       //ARRANGE
       string testWord = "hi";
       string matchWord = "hi";
-      RepeatSearch testRepeatSearch = new RepeatSearch();
+      RepeatSearch newSearch = new RepeatSearch();
       //ACT
-      string result =  testRepeatSearch.CountRepeats(testWord);
+      string result =  newSearch.Search(testWord);
       //ASSERT
       Assert.Equal(matchWord, result);
     }

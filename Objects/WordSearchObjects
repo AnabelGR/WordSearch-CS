@@ -1,21 +1,24 @@
 using System;
 using System.Collections.Generic;
 
+
 namespace WordSearch
 {
   public class RepeatSearch
   {
-    private string _searchWord;
-    private string _searchString;
-    private int _wordCount = 0;
-
-    public RepeatSearch(string searchWord, string searchString)
+    // private string _searchWord;
+    // private string _searchString;
+    // private int _wordCount = 0;
+    //
+    public string Search(string userWord)
     {
-      _searchWord = searchWord;
-      _searchString = searchString;
+    //   _searchWord = searchWord;
+    //   _searchString = searchString;
+    // }
+    //
+    // public int CountRepeats()
+    // {
+      return "pants";
     }
-
-    public int CountRepeats()
-    {
-      return 0;
-    }
+  }
+}
