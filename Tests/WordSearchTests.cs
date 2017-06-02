@@ -20,7 +20,7 @@ namespace WordSearch
       //ASSERT
       Assert.Equal(wordCount, result);
     }
-//FIND WORD AND MATCH
+//FIND WORD AND NOT MATCH
     [Fact]
     public void Test2_AreWordsNotIdentical_Count()
     {
@@ -34,5 +34,19 @@ namespace WordSearch
       //ASSERT
       Assert.Equal(wordCount, result);
     }
+    //FIND WORD IN A SENTENCE
+        [Fact]
+        public void Test3_CountOneInASentence_Count()
+        {
+          //ARRANGE
+          string testWord = "hi";
+          string matchWord = "no";
+          int wordCount = 0;
+          RepeatCounter newCounter = new RepeatCounter();
+          //ACT
+          int result =  newCounter.CheckRepeatCounter(testWord, matchWord);
+          //ASSERT
+          Assert.Equal(wordCount, result);
+        }
   }
 }
