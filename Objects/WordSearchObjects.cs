@@ -8,7 +8,7 @@ namespace WordSearch
 
     public int CheckRepeatCounter(string userWord, string matchWord)
     {
-    return 2;
+    return 0;
     }
   }
 }

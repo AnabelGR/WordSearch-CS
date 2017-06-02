@@ -13,7 +13,7 @@ namespace WordSearch
       //ARRANGE
       string testWord = "hi";
       string matchWord = "hi";
-      int wordCount = 1;
+      int wordCount = 0;
       RepeatCounter newCounter = new RepeatCounter();
       //ACT
       int result =  newCounter.CheckRepeatCounter(testWord, matchWord);
