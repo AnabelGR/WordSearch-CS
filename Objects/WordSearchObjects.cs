@@ -46,7 +46,7 @@ namespace WordSearch
         {
           _wordCount += 1;
         }
-        else
+        else 
         {
           _wordCount += 0;
         }
