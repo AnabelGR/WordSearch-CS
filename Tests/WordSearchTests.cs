@@ -38,9 +38,9 @@ namespace WordSearch
       string testSentence = "hello world";
       string matchWord = "hello";
       int wordCount = 1;
-      RepeatSearch findWord = new RepeatSearch()
+      RepeatSearch findWord = new RepeatSearch();
       //ACT
-      string result = findWord.CountRepeats(testSentence, matchWord);
+      int result = findWord.CountRepeats(testSentence, matchWord);
       //ASSERT
       Assert.Equal(wordCount, result);
     }
@@ -51,9 +51,9 @@ namespace WordSearch
       string testSentence = "hello world, hello universe";
       string matchWord = "hello";
       int wordCount = 2;
-      RepeatSearch findWord = new RepeatSearch()
+      RepeatSearch findWord = new RepeatSearch();
       //ACT
-      string result = findWord.CountRepeats(testSentence, matchWord);
+      int result = findWord.CountRepeats(testSentence, matchWord);
       //ASSERT
       Assert.Equal(wordCount, result);
     }
