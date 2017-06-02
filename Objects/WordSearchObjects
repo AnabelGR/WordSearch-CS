@@ -6,19 +6,14 @@ namespace WordSearch
 {
   public class RepeatSearch
   {
-    // private string _searchWord;
-    // private string _searchString;
+    private string _searchWord;
+    private string _searchString;
     // private int _wordCount = 0;
-    //
+
     public string Search(string userWord)
     {
-    //   _searchWord = searchWord;
-    //   _searchString = searchString;
-    // }
-    //
-    // public int CountRepeats()
-    // {
-      return "pants";
+      _searchWord = searchWord;
+      _searchString = searchString;
     }
   }
 }
