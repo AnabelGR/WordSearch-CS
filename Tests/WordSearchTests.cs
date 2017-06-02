@@ -8,45 +8,42 @@ namespace WordSearch
   {
 //FIND WORD AND MATCH
     [Fact]
-    public void Test1_AreWordsIdentical_Count()
+    public void Test1_AreWordsIdentical_CountRepeats()
     {
       //ARRANGE
-      string testWord = "hi";
+      string userSentence = "hi";
       string matchWord = "hi";
-      int wordCount = 0;
-      RepeatCounter newCounter = new RepeatCounter();
+      RepeatCounter newCounter = new RepeatCounter(userSentence, matchWord);
       //ACT
-      int result =  newCounter.CheckRepeatCounter(testWord, matchWord);
+      int result = newCounter.CountRepeats(userSentence, matchWord);
       //ASSERT
-      Assert.Equal(wordCount, result);
+      Assert.Equal(1, result);
     }
 //FIND WORD AND NOT MATCH
     [Fact]
-    public void Test2_AreWordsNotIdentical_Count()
+    public void Test2_AreWordsNotIdentical_CountRepeats()
     {
       //ARRANGE
-      string testWord = "hi";
+      string userSentence = "hi";
       string matchWord = "no";
-      int wordCount = 0;
-      RepeatCounter newCounter = new RepeatCounter();
+      RepeatCounter newCounter = new RepeatCounter(userSentence, matchWord);
       //ACT
-      int result =  newCounter.CheckRepeatCounter(testWord, matchWord);
+      int result =  newCounter.CountRepeats(userSentence, matchWord);
       //ASSERT
-      Assert.Equal(wordCount, result);
+      Assert.Equal(0, result);
     }
-    //FIND WORD IN A SENTENCE
-        [Fact]
-        public void Test3_CountOneInASentence_Count()
-        {
-          //ARRANGE
-          string testWord = "hi world";
-          string matchWord = "hi";
-          int wordCount = 1;
-          RepeatCounter newCounter = new RepeatCounter();
-          //ACT
-          int result =  newCounter.CheckRepeatCounter(testWord, matchWord);
-          //ASSERT
-          Assert.Equal(wordCount, result);
-        }
+//FIND WORD IN A SENTENCE
+    [Fact]
+    public void Test3_CountOneInASentence_CountRepeats()
+    {
+      //ARRANGE
+      string userSentence = "hi world";
+      string matchWord = "hi";
+      RepeatCounter newCounter = new RepeatCounter(userSentence, matchWord);
+      //ACT
+      int result =  newCounter.CountRepeats(userSentence, matchWord);
+      //ASSERT
+      Assert.Equal(1, result);
+    }
   }
 }
