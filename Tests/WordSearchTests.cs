@@ -32,7 +32,7 @@ namespace WordSearch
       Assert.Equal(matchWord, result);
     }
     [Fact]
-    public void Test3_CountWord_EnterStringCountWords()
+    public void Test3_CountOneWord_EnterStringCountWord()
     {
       //ARRANGE
       string testSentence = "hello world";
@@ -49,6 +49,19 @@ namespace WordSearch
     {
       //ARRANGE
       string testSentence = "hello world, hello universe";
+      string matchWord = "hello";
+      int wordCount = 2;
+      RepeatSearch findWord = new RepeatSearch();
+      //ACT
+      int result = findWord.CountRepeats(testSentence, matchWord);
+      //ASSERT
+      Assert.Equal(wordCount, result);
+    }
+    [Fact]
+    public void Test5_SentenceIgnoreCase_IgnoreCase()
+    {
+      //ARRANGE
+      string testSentence = "Hello world, hEllo universe";
       string matchWord = "hello";
       int wordCount = 2;
       RepeatSearch findWord = new RepeatSearch();
